@@ -1,0 +1,401 @@
+<LinearLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:background="@drawable/hesap1">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/Relative1"
+        android:background="#FFFFFF"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp">
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/hesapla"
+            android:background="@drawable/hesapla"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Harf Notu Hesaplama"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:textStyle="italic"
+            android:layout_marginTop="10dp"
+            android:id="@+id/textView1" />
+        <TextView
+            android:layout_width="42dp"
+            android:layout_height="20dp"
+            android:text="Vize:"
+            android:id="@+id/textView2"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="25dp"
+            android:layout_alignBottom="@+id/vizenotu"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="5dp"/>
+        <EditText
+            android:layout_width="46dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/vizenotu"
+            android:hint="Notunuz"
+            android:textSize="10dp"
+            android:layout_below="@+id/textView1"
+            android:layout_toEndOf="@+id/textView2"
+            android:inputType="numberDecimal|numberSigned"/>
+        <EditText
+            android:layout_width="46dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/vizeyuzdesi"
+            android:hint="% yüzde"
+            android:textSize="10dp"
+            android:layout_below="@+id/textView1"
+            android:layout_toEndOf="@+id/vizenotu"
+            android:inputType="numberDecimal|numberSigned"/>
+        <TextView
+            android:layout_width="42dp"
+            android:layout_height="20dp"
+            android:text="Final:"
+            android:id="@+id/textView3"
+            android:layout_alignBottom="@+id/finalnotu"
+            android:layout_toStartOf="@+id/finalnotu"
+            android:layout_marginBottom="5dp"/>
+
+        <EditText
+            android:layout_width="46dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/finalnotu"
+            android:hint="Notunuz"
+            android:layout_gravity="center_horizontal"
+            android:textSize="10dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/textView2"
+            android:inputType="numberDecimal|numberSigned"/>
+        <EditText
+            android:layout_width="46dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/finalyuzdesi"
+            android:hint="% yüzde"
+            android:layout_gravity="center_horizontal"
+            android:textSize="10dp"
+            android:layout_alignTop="@+id/finalnotu"
+            android:layout_toEndOf="@+id/vizenotu"
+            android:inputType="numberDecimal|numberSigned"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ödev  "
+            android:id="@+id/switch1"
+            android:layout_below="@+id/textView3"
+            android:layout_alignStart="@+id/textView3"/>
+        <TextView
+            android:layout_width="42dp"
+            android:layout_height="20dp"
+            android:text="Ödev:"
+            android:id="@+id/textView4"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/switch1"
+            android:layout_toStartOf="@+id/vizenotu" />
+        <EditText
+            android:layout_width="46dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/odevnotu"
+            android:hint="Notunuz"
+            android:layout_gravity="center_horizontal"
+            android:textSize="10dp"
+            android:inputType="numberDecimal|numberSigned"
+            android:layout_below="@+id/switch1"
+            android:layout_toEndOf="@+id/textView4" />
+        <EditText
+            android:layout_width="46dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/odevyuzdesi"
+            android:hint="% yüzde"
+            android:layout_gravity="center_horizontal"
+            android:textSize="10dp"
+            android:inputType="numberDecimal|numberSigned"
+            android:layout_alignTop="@+id/odevnotu"
+            android:layout_toEndOf="@+id/odevnotu" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/ortSonuc"
+            android:layout_below="@+id/textView4"
+            android:layout_alignStart="@+id/hesapla" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/harfnotu"
+            android:layout_alignTop="@+id/ortSonuc"
+            android:layout_alignEnd="@+id/hesapla" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:id="@+id/Relative2"
+        android:background="#FFFFFF"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Genel Ortalama Hesaplama"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:textStyle="italic"
+            android:layout_marginTop="10dp"
+            android:id="@+id/textView5" />
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:id="@+id/linearLayout"
+            android:orientation="vertical">
+            <EditText
+                android:layout_width="46dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText7"
+                android:hint="Ders1"
+                android:textSize="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="35dp"/>
+            <EditText
+                android:layout_width="46dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText8"
+                android:hint="Ders2"
+                android:textSize="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="30dp"/>
+            <EditText
+                android:layout_width="46dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText9"
+                android:hint="Ders3"
+                android:textSize="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="30dp"/>
+            <EditText
+                android:layout_width="46dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText10"
+                android:hint="Ders4"
+                android:textSize="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="30dp"/>
+            <EditText
+                android:layout_width="46dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText11"
+                android:hint="Ders5"
+                android:textSize="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="30dp"/>
+            <EditText
+                android:layout_width="46dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText12"
+                android:hint="Ders6"
+                android:textSize="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="30dp"/>
+            <EditText
+                android:layout_width="46dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText13"
+                android:hint="Ders7"
+                android:textSize="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="30dp"/>
+            <EditText
+                android:layout_width="46dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText14"
+                android:hint="Ders8"
+                android:textSize="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="30dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:id="@+id/linearLayout2"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/linearLayout"
+            android:orientation="vertical">
+
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner1"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="40dp">
+
+            </Spinner>
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner2"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="7dp">
+            </Spinner>
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner3"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="7dp">
+
+            </Spinner>
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner4"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="7dp">
+
+            </Spinner>
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner5"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="7dp">
+
+            </Spinner>
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner6"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="7dp">
+
+            </Spinner>
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner7"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="7dp">
+
+            </Spinner>
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner8"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="7dp">
+
+            </Spinner>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/linearLayout2"
+            android:orientation="vertical">
+            <EditText
+                android:layout_width="46dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText15"
+                android:hint="AKTS"
+                android:textSize="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="35dp"
+                android:inputType="numberDecimal|numberSigned"/>
+            <EditText
+                android:layout_width="46dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText16"
+                android:hint="AKTS"
+                android:textSize="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="30dp"
+                android:inputType="numberDecimal|numberSigned"/>
+            <EditText
+                android:layout_width="46dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText17"
+                android:hint="AKTS"
+                android:textSize="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="30dp"
+                android:inputType="numberDecimal|numberSigned"/>
+            <EditText
+                android:layout_width="46dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText18"
+                android:hint="AKTS"
+                android:textSize="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="30dp"
+                android:inputType="numberDecimal|numberSigned"/>
+            <EditText
+                android:layout_width="46dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText19"
+                android:hint="AKTS"
+                android:textSize="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="30dp"
+                android:inputType="numberDecimal|numberSigned"/>
+            <EditText
+                android:layout_width="46dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText20"
+                android:hint="AKTS"
+                android:textSize="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="30dp"
+                android:inputType="numberDecimal|numberSigned"/>
+            <EditText
+                android:layout_width="46dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText21"
+                android:hint="AKTS"
+                android:textSize="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="30dp"
+                android:inputType="numberDecimal|numberSigned"/>
+            <EditText
+                android:layout_width="46dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText22"
+                android:hint="AKTS"
+                android:textSize="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="30dp"
+                android:inputType="numberDecimal|numberSigned"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>
+
+

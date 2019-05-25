@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">DpuBuradaProjesi</string>
+    <string name="quit" />
+    <string name="really_quit" />
+    <string name="yes" />
+    <string name="no" />
+
+    <string-array name="HarfNotu">
+        <item>AA</item>
+        <item>BA</item>
+        <item>BB</item>
+        <item>CB</item>
+        <item>CC</item>
+        <item>DC</item>
+        <item>DD</item>
+        <item>DZ</item>
+        <item>FD</item>
+        <item>FF</item>
+    </string-array>
+
+</resources>
